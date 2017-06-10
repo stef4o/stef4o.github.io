@@ -1,0 +1,298 @@
+#page-container {
+    background-image: url("../images/background.png");
+    height: 100vh;
+}
+
+header {
+    height: 90px;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(15, 59, 130, .8));
+}
+
+header::before {
+    content: "SUDOKU";
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 2em;
+    font-weight: 900;
+    text-shadow: rgba(0, 0, 0, .3) 20px 30px 1px;
+    border-radius: 2px;
+    color: teal;
+    background: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(15, 59, 130, .4));
+}
+
+main {
+    /*border: 1px solid black;*/
+    height: 550px;
+    width: 90%;
+    margin: 20px auto 0;
+}
+
+main>div {
+    margin: 0 auto;
+    width: 960px;
+    height: inherit;
+}
+
+main>div>div {
+    display: inline-block;
+    float: left;
+}
+
+#gameTable {
+    /*border: 1px solid black;*/
+    /*width: 55%;*/
+    height: 95%;
+}
+
+#options {
+    /*border: 1px solid black;*/
+    /*width: 55px;*/
+    height: 95%;
+    margin: 0 20px 0 28px;
+    /*margin-left: -60px;*/
+}
+
+#options>div {
+    display: block;
+    margin: 25px 0;
+}
+
+#options>div>i::before {
+    /*margin-left: 33px;*/
+}
+
+#options>div>i {
+    color: rgba(15, 59, 130, .7);
+    text-shadow: rgba(0, 0, 0, .4) 5px 8px 10px;
+    margin: 0 auto;
+}
+
+#options>div>i:hover {
+    color: teal;
+    cursor: pointer;
+}
+
+#hint>i {
+    padding-left: 10px;
+}
+
+#keyboard {
+    /*border: 1px solid black;*/
+    height: 30px;
+    width: 300px;
+    margin: 10px auto 0;
+    border-radius: 5px;
+    display: none;
+}
+
+#keyboard>div {
+    display: inline-block;
+    width: 29.7px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 4px;
+    box-sizing: border-box;
+    background-color: teal;
+    color: white;
+    font-weight: 800;
+    border-radius: 4px;
+    font-size: 1.3em;
+}
+
+#keyboard>div:hover {
+    background-color: white;
+    color: teal;
+    cursor: pointer;
+}
+
+#scores {
+    border: 3px solid rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    width: 30%;
+    height: 95%;
+    /*margin-left: 10px;*/
+    font-family: monospace;
+}
+
+#scores>#average-time {
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 20%;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#scores>#average-time>#time {
+    height: 50px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 3em;
+}
+
+#scores>#average-time>#text {
+    font-size: 1.3em;
+    text-align: center;
+}
+
+#scores>#average-time>#header {
+    /*position: absolute;
+    bottom: 0;*/
+    width: 100%;
+    height: 40px;
+}
+
+#scores>#average-time>#header>div {
+    width: 50%;
+    height: inherit;
+    text-align: center;
+    display: inline-block;
+    float: left;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+
+#sudokuGrid {
+    border: 3px solid gray;
+    height: 500px;
+    width: 500px;
+    box-shadow: rgba(15, 59, 130, .7) 1px 1px 20px 3px;
+    border-radius: 8px;
+    margin: 0 auto;
+    z-index: 100;
+}
+
+.grid-box {
+    border: 3px solid gray;
+    width: 33.333333%;
+    height: 33.333333%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.cell-box {
+    border: 1px solid gray;
+    width: 33.333333%;
+    height: 33.333333%;
+    float: left;
+    box-sizing: border-box;
+    color: rgba(15, 59, 130, 1);
+    position: relative;
+}
+
+.disabled_cell {
+    color: lightslategrey;
+}
+
+.cell-box>input {
+    width: 100%;
+    height: 100%;
+    /* opacity: .0; */
+    background-color: rgba(255, 255, 255, 0.0);
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.4em;
+    /*color: rgba(15, 59, 130, 1);*/
+    /* border-collapse: collapse; */
+    color: inherit;
+    border: rgba(255, 255, 255, .0);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.disabled-cell {
+    color: darkslategrey;
+}
+
+.dark-theme {
+    background-color: rgba(15, 59, 130, .2);
+}
+
+.warning {
+    background: rgba(244, 75, 66, .6) !important;
+}
+
+.invalid-solution {
+    box-shadow: rgba(255, 0, 0, .7) 1px 1px 20px 3px !important;
+    border: red solid 3px !important;
+}
+
+.valid-solution {
+    box-shadow: rgba(30, 190, 100, .7) 1px 1px 20px 3px !important;
+    border: green solid 3px !important;
+}
+
+#timing {
+    float: right;
+    display: inline-block;
+    color: white;
+    margin: 25px 50px 0 0;
+}
+
+#timing>div {
+    float: left;
+    font-weight: 900;
+    font-size: 3em;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#timing>span {
+    display: inline-block;
+    height: inherit;
+    position: absolute;
+    float: right;
+    padding-top: 8px;
+}
+
+#spinner-loading {
+    width: 50px;
+    height: 50px;
+    /*border: 1px solid black;*/
+    display: inline-block;
+    visibility: false;
+    margin-left: 50%;
+}
+
+#spinner-loading>div {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#games>div>div {
+    float: left;
+    width: 50%;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 20px 0;
+}
+
+#games>.info-games {
+    text-align: center;
+    width: 100%;
+    font-size: 1.2em;
+    padding: 20px 0;
+}
+
+.possible_choices {
+    width: 50%;
+    font-size: .7em;
+    /*word-wrap: break-word;*/
+    color: gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bulb_on {
+    color: rgb(212, 226, 9) !important;
+}
+
+.bulb_off {
+    color: rgba(15, 59, 130, .7) !important;
+}

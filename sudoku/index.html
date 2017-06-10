@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sudoku Game</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="resources/style/reset.css">
+    <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="resources/style/custom.css">
+</head>
+
+<body>
+    <div id="page-container">
+        <header>
+            <div id="spinner-loading">
+                <div>
+                    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                </div>
+            </div>
+            <div id="timing">
+                <div>00:00</div>
+                <span><i class="fa fa-clock-o fa-2x" aria-hidden="true"></i></span>
+            </div>
+        </header>
+
+        <main>
+            <div>
+                <div id="gameTable">
+                    <div id="sudokuGrid"></div>
+                    <div id="keyboard">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                    </div>
+                </div>
+
+                <div id="options">
+                    <div id="play"><i class="fa fa-play-circle-o fa-4x" aria-hidden="true"></i></div>
+                    <div id="stop"><i class="fa fa-stop-circle-o fa-4x" aria-hidden="true"></i></div>
+                    <div id="solve"><i class="fa fa-key fa-4x" aria-hidden="true"></i></div>
+                    <div id="hint"><i class="fa fa-lightbulb-o fa-4x" aria-hidden="true"></i></div>
+                </div>
+
+                <div id="scores">
+                    <div id="average-time">
+                        <div id="time">00:00</div>
+                        <div id="text">Average time</div>
+                        <div id="header">
+                            <div>Game</div>
+                            <div>Time</div>
+                        </div>
+                    </div>
+                    <div id="games">
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="resources/javascript/jquery-3.2.0.js"></script>
+    <script src="resources/javascript/UI.js"></script>
+    <script src="resources/javascript/TimeHelper.js"></script>
+    <script src="resources/javascript/Timer.js"></script>
+    <script src="resources/javascript/validator.js"></script>
+    <script src="resources/javascript/solver.js"></script>
+    <script src="resources/javascript/generator.js"></script>
+    <script src="resources/javascript/sudoku.js"></script>
+</body>
+
+</html>
