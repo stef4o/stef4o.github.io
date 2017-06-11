@@ -296,3 +296,71 @@ main>div>div {
 .bulb_off {
     color: rgba(15, 59, 130, .7) !important;
 }
+
+
+/* Smartphones (portrait) ----------- */
+
+@media (max-width: 420px) {
+    #page-container {
+        height: 1300px;
+    }
+    header::before {
+        margin-left: 2%;
+    }
+    #timing {
+        margin: 25px 8% 0 0;
+    }
+    main {
+        width: 100%;
+    }
+    main>div {
+        width: 100%;
+    }
+    main>div>div {
+        width: 100%;
+        display: block;
+        clear: both;
+    }
+    #gameTable {
+        height: 90%;
+    }
+    #sudokuGrid {
+        width: 95%;
+        height: 92%;
+    }
+    #options {
+        height: 25%;
+        margin: 0;
+        padding-left: 7%;
+        box-sizing: border-box;
+    }
+    #options>div {
+        width: 23%;
+        display: inline-block;
+    }
+    #scores {
+        width: 90%;
+        margin-left: 4%;
+    }
+    #keyboard>div {
+        width: 9%;
+    }
+}
+
+@media (max-width: 375px) {
+    #page-container {
+        height: 1300px;
+    }
+    header::before {
+        font-size: 1.8em;
+    }
+    #timing {
+        margin: 25px 10% 0 0;
+    }
+    #timing>div {
+        font-size: 2em;
+    }
+    #timing>span {
+        padding-top: 0px;
+    }
+}
